@@ -6,7 +6,7 @@
   "scripts": {
     "dev": " vite",
     "build": "vite build",
-    "start": " node dist/server/index.js",
+    "start": " node dist/assets/index.js",
     "check": "tsc",
     "db:push": "drizzle-kit push"
   },
