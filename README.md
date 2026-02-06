@@ -1,62 +1,70 @@
-# Algorithm Visualizer
+# 📊 Algo Visualizer
 
-## Overview
+An interactive algorithm visualization platform built to understand sorting and searching algorithms step-by-step with real-time animation and execution insights.
 
-This is an interactive algorithm visualization tool built with React and Express. It allows users to visualize sorting algorithms (bubble sort, selection sort, insertion sort, merge sort, quick sort) and searching algorithms (linear search, binary search) with animated step-by-step execution. The application is entirely client-side for algorithm execution, using generator functions to step through each algorithm iteration with precise timing control.
+---
 
-## User Preferences
+## 🚀 Live Demo
 
-Preferred communication style: Simple, everyday language.
+ https://algo-visualizer-e2ps.onrender.com
 
-## System Architecture
+---
 
-### Frontend Architecture
-- **Framework**: React 18 with TypeScript
-- **Build Tool**: Vite with hot module replacement
-- **Routing**: Wouter (lightweight React router)
-- **State Management**: React hooks with useRef for animation control
-- **Styling**: Tailwind CSS with shadcn/ui component library
-- **Animations**: Framer Motion for smooth bar/element transitions during visualization
+## 🧠 Algorithms Implemented
 
-### Backend Architecture
-- **Framework**: Express.js with TypeScript
-- **Purpose**: Serves static files only - all algorithm logic runs client-side
-- **Development**: Vite middleware for HMR during development
-- **Production**: Static file serving from built assets
+### Sorting Algorithms
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+- Merge Sort
+- Quick Sort
 
-### Algorithm Visualization Design
-- **Generator Pattern**: Each algorithm is implemented as a JavaScript generator function that yields `Step` objects
-- **Step Object**: Contains `array` (current state), `comparing` (indices being compared), `swapping` (indices being swapped), `sorted` (completed indices), and optionally `found` (for search)
-- **Playback Control**: Uses refs (`stopRef`, `generatorRef`) to manage pause/resume and speed adjustment without re-renders
-- **Visual Feedback**: Color-coded bars indicate state (primary=default, amber=comparing, red=swapping, green=sorted/found)
+### Searching Algorithms
+- Linear Search
+- Binary Search
 
-### Database Configuration
-- **ORM**: Drizzle ORM configured for PostgreSQL
-- **Schema Location**: `shared/schema.ts`
-- **Current Usage**: Minimal - users table exists but not actively used (algorithm runs are client-side only)
-- **Migrations**: Managed via `drizzle-kit push`
+---
 
-### Path Aliases
-- `@/*` → `./client/src/*`
-- `@shared/*` → `./shared/*`
-- `@assets/*` → `./attached_assets/*`
+## ✨ Features
 
-## External Dependencies
+- Step-by-step execution
+- Real-time comparison tracking
+- Real-time swap tracking
+- Adjustable speed control (1–100)
+- Pause / Resume / Stop functionality
+- Generator-based execution logic
+- Statistics tracking (comparisons and swaps)
+- Responsive UI
 
-### UI Component Library
-- **shadcn/ui**: Full component suite with Radix UI primitives
-- **Configuration**: `components.json` defines new-york style, neutral base color, CSS variables enabled
+---
 
-### Key Runtime Dependencies
-- **@tanstack/react-query**: Data fetching/caching (available but algorithms don't use API)
-- **framer-motion**: Essential for smooth layout animations during sorting
-- **drizzle-orm**: PostgreSQL ORM (requires DATABASE_URL environment variable)
-- **connect-pg-simple**: Session storage (available for future auth needs)
+## 🛠 Tech Stack
 
-### Build & Development
-- **tsx**: TypeScript execution for development server
-- **esbuild**: Production server bundling with dependency optimization
-- **vite**: Client-side bundling with React plugin
+### Frontend
+- React
+- TypeScript
+- Vite
 
-### Environment Variables Required
-- `DATABASE_URL`: PostgreSQL connection string (required by drizzle config)
+### State & Logic
+- React Hooks
+- Generator Functions
+
+### Styling
+- Tailwind CSS 
+
+---
+
+## 📈 Future Improvements
+
+- Add Graph Algorithms (BFS, DFS, Dijkstra)
+- Add Tree Visualizer
+- Add Code Execution Panel
+- Add Dark Mode
+- Add Complexity Comparison Charts
+
+---
+
+## 👨‍💻 Author
+
+Siddharth Rawat  
+GitHub: https://github.com/yourusername
