@@ -63,8 +63,3 @@ An interactive algorithm visualization platform built to understand sorting and 
 - Add Complexity Comparison Charts
 
 ---
-
-## 👨‍💻 Author
-
-Siddharth Rawat  
-GitHub: https://github.com/yourusername
